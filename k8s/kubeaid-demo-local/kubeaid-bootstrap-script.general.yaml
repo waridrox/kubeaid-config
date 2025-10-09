@@ -1,0 +1,24 @@
+forkURLs:
+  kubeaid: https://github.com/Obmondo/KubeAid
+  kubeaidConfig: https://github.com/waridrox/kubeaid-config
+
+
+cluster:
+  name: kubeaid-demo-local
+  k8sVersion: v1.31.0
+  kubeaidVersion: 18.0.0
+
+
+cloud:
+  local: {}
+
+
+git:
+  useSSHAgentAuth: false
+  useSSHPrivateKeyAuth: false
+
+
+argocd:
+  useSSHPrivateKeyAuth: false
+  kubeaidURL: https://github.com/Obmondo/KubeAid
+  kubeaidConfigURL: https://github.com/waridrox/kubeaid-config
