@@ -1,0 +1,27 @@
+git:
+  privateKeyFilePath: /home/mwarid/.ssh/id_github
+
+forkURLs:
+  kubeaid:
+    url: git@github.com:Obmondo/KubeAid.git
+    version: 23.0.0
+  kubeaidConfig:
+    url: git@github.com:waridrox/kubeaid-config.git
+    directory: test-local
+
+cluster:
+  name: test-local
+  k8sVersion: v1.33.0
+  argoCD:
+    deployKeys:
+      kubeaidConfig:
+        privateKeyFilePath: /home/mwarid/.ssh/kubeaid-config
+      kubeaid:
+        privateKeyFilePath: /home/mwarid/.ssh/kubeaid
+
+cloud:
+  local: {}
+
+kubePrometheus:
+  version: v0.15.0
+  grafanaURL:
