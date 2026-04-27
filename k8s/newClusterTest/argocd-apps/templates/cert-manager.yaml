@@ -4,21 +4,21 @@ metadata:
   labels:
     kubeaid.io/version: 27.0.0
     kubeaid.io/managed-by: kubeaid
-    kubeaid.io/sync-order: "50"
-  name: cilium
+    kubeaid.io/sync-order: "10"
+  name: cert-manager
   namespace: argocd
 spec:
   destination:
-    namespace: cilium
+    namespace: cert-manager
     server: https://kubernetes.default.svc
   project: kubeaid
   sources:
     - repoURL: git@github.com:Obmondo/KubeAid.git
-      path: argocd-helm-charts/cilium
-      targetRevision: 23.0.0
+      path: argocd-helm-charts/cert-manager
+      targetRevision: 27.0.0
       helm:
         valueFiles:
-          - $values/k8s/test-local/argocd-apps/values-cilium.yaml
+          - $values/k8s/newClusterTest/argocd-apps/values-cert-manager.yaml
     - repoURL: git@github.com:waridrox/kubeaid-config.git
       targetRevision: HEAD
       ref: values
@@ -26,4 +26,3 @@ spec:
     syncOptions:
       - CreateNamespace=true
       - ApplyOutOfSyncOnly=true
-      - ServerSideApply=true

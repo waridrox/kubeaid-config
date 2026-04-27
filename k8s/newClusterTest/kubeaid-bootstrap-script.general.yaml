@@ -1,0 +1,34 @@
+git:
+  sshUsername: git
+  useSSHAgent: true
+
+forkURLs:
+  kubeaid:
+    url: git@github.com:Obmondo/KubeAid.git
+    version: 27.0.0
+  kubeaidConfig:
+    url: git@github.com:waridrox/kubeaid-config.git
+    directory: 
+
+cluster:
+  type: workload
+  name: newClusterTest
+  k8sVersion: v1.35.3
+  enableAuditLogging: false
+  apiServer:
+    extraArgs: {}
+    extraVolumes: []
+    files: []
+  argoCD:
+    deployKeys:
+      kubeaid:
+        privateKeyFilePath: /home/mwarid/.ssh/id_ed25519
+      kubeaidConfig:
+        privateKeyFilePath: /home/mwarid/.ssh/id_ed25519
+
+kubePrometheus:
+  version: v0.17.0
+
+cloud:
+  local: {}
+
