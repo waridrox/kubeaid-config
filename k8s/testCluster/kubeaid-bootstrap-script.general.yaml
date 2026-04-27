@@ -1,6 +1,7 @@
 git:
   sshUsername: git
-  useSSHAgent: true
+  useSSHAgent: false
+  privateKeyFilePath: /home/mwarid/.ssh/id_ed25519
 
 forkURLs:
   kubeaid:
