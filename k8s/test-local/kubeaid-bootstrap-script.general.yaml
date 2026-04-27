@@ -1,5 +1,6 @@
 git:
   privateKeyFilePath: /home/mwarid/.ssh/id_github
+  useSSHAgent: false
 
 forkURLs:
   kubeaid:
